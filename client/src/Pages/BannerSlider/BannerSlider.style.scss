@@ -1,0 +1,29 @@
+.BannerSlider-Wrapper {
+  .BannerSlider-Container {
+    height: 100vh;
+    .slick-list {
+      img {
+        display: block;
+        filter: contrast(1.2);
+        max-width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: 45.636%;
+      }
+      .slick-track {
+        .slick-slide {
+          position: absolute !important;
+          inset: 0 !important;
+          width: 100% !important;
+          height: 100vh !important;
+        }
+      }
+    }
+
+    .image-input {
+      position: relative;
+      color: white;
+      right: 0%;
+    }
+  }
+}

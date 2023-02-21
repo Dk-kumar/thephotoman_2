@@ -1,0 +1,44 @@
+:root {
+  --loading-grey: #ededed;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+.Card-Wrapper {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+
+  .Image, .Content-Loader {
+    background-color: var(--loading-grey);
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0) 60%
+      )
+      var(--loading-grey);
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 1s loading ease-in-out infinite;
+  }
+
+  .Content {
+      padding: 2rem;
+  }
+  .Content-Loader {
+    height: 93vh;
+    border-radius: 16px;
+    animation-delay: 0.05s;
+  }
+
+  @keyframes loading {
+    to {
+      background-position-x: -20%;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.Recent-Storise-Container {
+  .Heading-Wrapper {
+    text-align: center;
+    padding: 4rem 0 3rem;
+    .Heading {
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+  }
+  .Card-Container {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Story-Card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      background-color: #243524;
+
+      .Image {
+        height: 21em;
+        max-width: 100%;
+        cursor: pointer;
+      }
+
+      .Contend-Wrapper {
+        padding: 2rem 0 3rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+
+        .Title {
+          font-size: 26px;
+          text-transform: uppercase;
+          font-family: Cardo;
+          letter-spacing: 1px;
+          cursor: pointer;
+        }
+
+        .Location {
+          font-size: 12px;
+          font-family: "Jost", sans-serif;
+          letter-spacing: 4px;
+          cursor: pointer;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

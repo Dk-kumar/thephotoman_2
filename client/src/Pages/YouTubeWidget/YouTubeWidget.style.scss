@@ -1,0 +1,17 @@
+.video-player {
+  position: relative;
+  padding-bottom: 30.25%; /* 16:9 */
+  height: 0;
+  margin: 3rem 10rem 0rem;
+}
+#player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.html5-video-player{
+  background-color: #fff;
+}
