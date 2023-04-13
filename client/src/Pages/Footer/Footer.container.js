@@ -4,10 +4,10 @@ import Footer from "./Footer.component";
 class FooterContainer extends Component {
   state = {
     links: [
-      {
-        id: 1,
-        title: "Home",
-      },
+      // {
+      //   id: 1,
+      //   title: "Home",
+      // },
       {
         id: 2,
         title: "About",
@@ -18,7 +18,7 @@ class FooterContainer extends Component {
       },
       {
         id: 4,
-        title: "Baby Shower",
+        title: "Maternity",
       },
       {
         id: 5,

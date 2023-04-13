@@ -1,0 +1,23 @@
+.GalleryList-Container {
+  .Base-Image-Wrapper {
+      margin-top: 10px;
+    .Image-Container {
+      width: 800px;
+      margin: auto;
+      .Image {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .Image-Collection-Container {
+
+    .Image-Container {
+      width: 800px;
+      margin: auto;
+      .Image {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Gallery from "./Gallery.component";
 import GalleryDispatcher from "../../Store/Gallery/Gallery.dispatcher";
 import { withRouter } from "../../Utils/WithRouter";
+import GalleryList from "./GalleryList.component";
 
-const Query = `[galleries][name]=`;
+const Query = `[id]=`;
 
 export const mapStateToProps = (state) => ({
-  gallery: state.galleryReducer,
+  galleryLitsData: state.galleryReducer,
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  getGallerys: (filterKey) =>
+  getGalleryList: (filterKey) =>
     GalleryDispatcher.getGallerysList(dispatch, Query, filterKey),
 });
 
-class GalleryContainer extends Component {
+class GalleryListContainer extends Component {
   state = {};
 
   componentDidMount() {
-    this.getGallerysCollection();
+    this.getGalleryListCollection();
   }
 
   componentDidUpdate(prevProps) {
@@ -28,25 +28,24 @@ class GalleryContainer extends Component {
     } = this.props;
 
     if (prevProps.router.params !== params) {
-      this.getGallerysCollection();
+      this.getGalleryListCollection();
     }
   }
 
-  getGallerysCollection() {
+  getGalleryListCollection() {
     const {
-      getGallerys,
+      getGalleryList,
       router: { location: { pathname = "" } = {} },
     } = this.props;
+
     const filterKey = pathname?.slice(pathname.lastIndexOf("/") + 1);
-
-    getGallerys(filterKey);
+    getGalleryList(filterKey);
   }
-
   render() {
-    return <Gallery {...this.props} />;
+    return <GalleryList {...this.props} />;
   }
 }
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(GalleryContainer)
+  connect(mapStateToProps, mapDispatchToProps)(GalleryListContainer)
 );

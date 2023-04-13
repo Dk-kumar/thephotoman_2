@@ -1,0 +1,53 @@
+.Header-Container {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin: 2rem 0;
+  .Nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+
+    @media (min-width: 767px) and (max-width: 1440px) {
+      gap: 2.5rem;
+    }
+
+    .Nav-Links {
+      color: #fff;
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      @media (min-width: 767px) and (max-width: 1440px) {
+        font-size: 16px;
+      }
+      .Image-Wrapper {
+        width: 360px;
+        @media (min-width: 767px) and (max-width: 1440px) {
+          width: 280px;
+        }
+        .Image {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.NotHome {
+  margin: 0;
+  background: black;
+  position: relative;
+  padding: 1rem 0;
+
+  .Nav-Links {
+    font-size: 18px !important;
+    cursor: pointer;
+    .Image-Wrapper {
+      width: 230px !important;
+      .Image {
+        max-width: 100%;
+      }
+    }
+  }
+}

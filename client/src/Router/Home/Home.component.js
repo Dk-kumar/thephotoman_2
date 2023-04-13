@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import BannerSliderContainer from "../../Pages/BannerSlider/BannerSlider.container";
-import HeaderContainer from "../../Pages/Header/Header.container";
-import "./Home.style.scss"
+import "./Home.style.scss";
+import InProgress from "../../Pages/InProgress/InProgress.component";
 class Home extends Component {
   renderBannerSlider() {
     return <BannerSliderContainer />;
@@ -9,12 +9,14 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="Home-Container">
-        <div className="Header-Wrapper">
-          <HeaderContainer />
-        </div>
-        <div className="Banner-Wrapper">{this.renderBannerSlider()}</div>
+      <>
+      <div className="Mobile-View">
+        <InProgress />
       </div>
+        <div className="Home-Container">
+          <div className="Banner-Wrapper">{this.renderBannerSlider()}</div>
+        </div>
+      </>
     );
   }
 }

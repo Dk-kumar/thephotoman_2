@@ -1,10 +1,15 @@
 .Home-Container {
-    position: relative;
-    .Header-Wrapper {
-        position: absolute;
-        z-index: 1;
-    }
-    .Banner-Wrapper {
+  display: block;
+  @media (max-width: 1200px) {
+    display: none;
+  }
+  .Banner-Wrapper {
+  }
+}
 
-    }
+.Mobile-View {
+  display: none;
+  @media (max-width: 1200px) {
+    display: block;
+  }
 }

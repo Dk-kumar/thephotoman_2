@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { mediaURL } from "../../Utils/EndPoints";
-
 import "./RecentStorys.style.scss";
 
 class RecentStorys extends Component {
@@ -20,7 +20,7 @@ class RecentStorys extends Component {
         <div className="Card-Container">
           {storiesList.map((res) => {
             return (
-              <div className="Story-Card" key={res.id}>
+              <Link to={`/galleryList/${res.id}`} className="Story-Card" key={res.id}>
                 <img
                   src={`${mediaURL}${res.attributes.base_image.data.attributes.url}`}
                   alt="name"
@@ -31,7 +31,7 @@ class RecentStorys extends Component {
                   <p className="Title">{res.attributes.title}</p>
                   <p className="Location">{res.attributes.location}</p>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

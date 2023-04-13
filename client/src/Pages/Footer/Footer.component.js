@@ -1,14 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Logo_White from "../../Shared/Logo_White.png";
-import {
-  email,
-  facebook,
-  Location,
-  instagram,
-  phone,
-  twitter,
-  youtube,
-} from "../../Utils/Icons";
+import { email, Location, instagram, phone, youtube } from "../../Utils/Icons";
 import "./Footer.style.scss";
 
 class Footer extends Component {
@@ -17,7 +10,12 @@ class Footer extends Component {
       <>
         <div className="Left-Side">
           <div className="Footer-Logo">
-            <img loading="lazy" className="Logo-Image" src={Logo_White} alt="Logo" />
+            <img
+              loading="lazy"
+              className="Logo-Image"
+              src={Logo_White}
+              alt="Logo"
+            />
           </div>
         </div>
       </>
@@ -25,13 +23,19 @@ class Footer extends Component {
   }
 
   renderLinks() {
-    const { links } = this.props;
+    const { links = [] } = this.props;
     return (
       <div className="Center">
         <h4 className="Title">Quick Links</h4>
         <ul className="Links-Wrapper">
           {links.map((link) => {
-            return <li key={link.id}>{link.title}</li>;
+            return (
+              <li key={link.id}>
+                <Link to={`/gallery/${link.title.toLowerCase()}`}>
+                  {link.title}
+                </Link>
+              </li>
+            );
           })}
         </ul>
       </div>
@@ -44,15 +48,16 @@ class Footer extends Component {
         <h4 className="Title">Contact Us</h4>
         <span className="Details-Wrapper">
           <i className="Icons">{phone()}</i>
-          +1 123-456-0606
+          9791678582, 9952383862, 9159954482.
         </span>
         <span className="Details-Wrapper">
           <i className="Icons">{email()}</i>
-          thephotoman@gmail.com
+          thephotomaninfo@gmail.com
         </span>
-        <span className="Details-Wrapper">
+        <span className="Details-Wrapper Address">
           <i className="Icons">{Location()}</i>
-          120 King St, Charleston SC 29401, USA
+          No 72 ramana gounder nagar, sankaralinganar street, Maniyakarpalayam
+          Coimbatore Tamil Nadu 641006 India
         </span>
       </div>
     );
@@ -69,10 +74,21 @@ class Footer extends Component {
   socialMedia() {
     return (
       <div className="Social-Media">
-        <div className="Icons">{instagram()}</div>
-        <div className="Icons">{twitter()}</div>
-        <div className="Icons">{facebook()}</div>
-        <div className="Icons">{youtube()}</div>
+        <a
+          className="Icons"
+          href=" https://instagram.com/thephotomanphotography?igshid=YmMyMTA2M2Y="
+          target="_blank"
+        >
+          {instagram()}
+        </a>
+        <a
+          className="Icons"
+          href="https://youtube.com/@thephotomanphotography4953"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {youtube()}
+        </a>
       </div>
     );
   }

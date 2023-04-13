@@ -1,20 +1,52 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 import GalleryContainer from "./Gallery/Gallery.container";
 import Home from "./Home/Home.component";
-import { withRouter } from "../Utils/WithRouter";
+import HeaderContainer from "../Pages/Header/Header.container";
+import FooterContainer from "../Pages/Footer/Footer.container";
+import GalleryListContainer from "./GalleryList/GalleryList.container";
+import AboutContainer from "../Pages/About/About.container";
+import ContactUsContainer from "../Pages/ContactUs/ContactUs.container";
 
-const AppRouter = (props) => {
+const LayOut = () => {
+  if (window.innerWidth <= 1200) return <Home />;
+
   return (
     <>
-      <Routes>
-        <Route exact path={"/"} element={<Home {...props} />} />
-        <Route exact path={"/gallery"}>
-          <Route path={":list"} element={<GalleryContainer {...props} />} />
-        </Route>
-      </Routes>
+      <HeaderContainer />
+      <Outlet />
+      <FooterContainer />
     </>
   );
 };
 
-export default withRouter(AppRouter);
+const AppRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <LayOut />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/gallery/:list",
+        element: <GalleryContainer />,
+      },
+      {
+        path: "/galleryList/:id",
+        element: <GalleryListContainer />,
+      },
+      {
+        path: "/about",
+        element: <AboutContainer />,
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUsContainer />,
+      },
+    ],
+  },
+]);
+
+export default AppRouter;

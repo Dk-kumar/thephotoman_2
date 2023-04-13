@@ -2,28 +2,32 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { mediaURL } from "../../Utils/EndPoints";
 import "./Header.style.scss";
+
+const HomePageURL = "/";
 class Header extends Component {
-  state = {};
 
   renderLogo(src, alt) {
     return (
       <div className="Image-Wrapper">
-        <img className="Image" src={`${mediaURL}${src}`} alt={alt} />
+        <img
+          className="Image"
+          loading="lazy"
+          src={`${mediaURL}${src}`}
+          alt={alt}
+        />
       </div>
     );
   }
 
   handleNavLinks() {
-    const {
-      block: { blockList = [{}] },
-    } = this.props;
+    const { block: { blockList = [{}] } = {} } = this.props;
     const [{ attributes: Nav_Links } = {}] = blockList;
-    console.log(Nav_Links, blockList);
+
     return (
-      <nav>
+      <nav className="Nav">
         {Nav_Links?.Nav_Links?.map((navLink) => {
           return (
-            <Link to={navLink.url} className="Nav-Links">
+            <Link to={`${navLink.url}`} className="Nav-Links">
               {navLink.name !== "Logo"
                 ? navLink.name
                 : this.renderLogo(navLink.Logo, navLink.name)}
@@ -33,8 +37,18 @@ class Header extends Component {
       </nav>
     );
   }
+
   render() {
-    return <header>{this.handleNavLinks()}</header>;
+    const {
+      router: { location: { pathname = "" } = {} },
+    } = this.props;
+    const isHome = pathname === HomePageURL ? false : true;
+
+    return (
+      <header className={`Header-Container ${isHome ? "NotHome" : "InHome"}`}>
+        {this.handleNavLinks()}
+      </header>
+    );
   }
 }
 

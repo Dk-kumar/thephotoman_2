@@ -1,5 +1,8 @@
 /* eslint-disable array-callback-return */
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Loader from "../../Pages/Loader/Loader.component";
+import { Banner } from "../../Pages/Loader/LoaderTypes";
 import { mediaURL } from "../../Utils/EndPoints";
 import "./Gallery.style.scss";
 
@@ -14,11 +17,12 @@ class Gallery extends Component {
     } = this.props;
 
     return galleryList?.map((galleryList, index) => {
+      console.log(galleryList)
       if (!index) {
         return (
           <>
             <div className="Base-Gallery" key={galleryList.id}>
-              <div className="Gallery-Wrapper">
+              <Link to={`/galleryList/${galleryList.id}`} className="Gallery-Wrapper">
                 <img
                   className="Image"
                   src={`${mediaURL}${galleryList.attributes.base_image.data.attributes.url}`}
@@ -26,7 +30,7 @@ class Gallery extends Component {
                   loading="lazy"
                 />
                 <p className="Name">{galleryList.attributes.title}</p>
-              </div>
+              </Link>
               <div>
                 {this.renderDescription(galleryList.attributes.description)}
               </div>
@@ -49,10 +53,14 @@ class Gallery extends Component {
 
     return (
       <>
-        <div className="Child-Gallery" key={galleryList.id}>
+        <div className="Child-Gallery">
           {galleryList.slice(CHILD_GALLERY).map((galleryList) => {
             return (
-              <div className="Gallery-Wrapper">
+              <Link
+                className="Gallery-Wrapper"
+                to={`/galleryList/${galleryList.id}`}
+                key={galleryList.id}
+              >
                 <img
                   className="Image"
                   src={`${mediaURL}${galleryList.attributes.base_image.data.attributes.url}`}
@@ -60,7 +68,7 @@ class Gallery extends Component {
                   loading="lazy"
                 />
                 <p className="Name">{galleryList.attributes.title}</p>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -81,12 +89,23 @@ class Gallery extends Component {
   }
 
   render() {
-    console.log(this.props);
+    const {
+      gallery: { isLoading },
+    } = this.props;
+
     return (
-      <div className="Gallery-Container">
-        {this.renderBaseGallery()}
-        {this.renderGalleryChild()}
-      </div>
+      <>
+        {!isLoading ? (
+          <Loader type={Banner} />
+        ) : (
+          <>
+            <div className="Gallery-Container">
+              {this.renderBaseGallery()}
+              {this.renderGalleryChild()}
+            </div>
+          </>
+        )}
+      </>
     );
   }
 }

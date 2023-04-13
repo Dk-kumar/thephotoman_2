@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 import React, { Component } from "react";
 import FooterContainer from "../Footer/Footer.container";
-import "./YouTubeWidget.style.scss"
+import "./YouTubeWidget.style.scss";
 
 class YouTubeWidget extends Component {
   state = {};
@@ -43,20 +43,15 @@ class YouTubeWidget extends Component {
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
         event.target.mute();
-        event.target.stopVideo();   
+        event.target.stopVideo();
       }
     })();
   }
   render() {
     return (
-      <>
       <div class="video-player">
         <div id="player"></div>
       </div>
-        <FooterContainer />
-      </>
-      
-
     );
   }
 }

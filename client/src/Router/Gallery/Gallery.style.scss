@@ -38,6 +38,7 @@
         font-size: 30px;
         line-height: 2.35em;
         letter-spacing: 2px;
+        text-transform: capitalize;
       }
 
       .Description {
@@ -69,10 +70,12 @@
 
   .Child-Gallery {
     // margin: 0 5rem 0 5rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     gap: 34px;
-
+    max-width: 1024px;
+    margin: 0 auto;
     .Gallery-Wrapper {
       display: flex;
       flex-direction: column;
@@ -81,6 +84,7 @@
       width: 22em;
       text-align: center;
       gap: 14px;
+      text-decoration: none;
       .Image {
         max-width: 100%;
         object-fit: cover;
@@ -92,6 +96,7 @@
         font-size: 20px;
         text-transform: capitalize;
         cursor: pointer;
+        color: black;
       }
     }
   }

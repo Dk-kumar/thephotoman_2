@@ -1,10 +1,9 @@
 import React, { Component } from "react";
+import Meta from "./Meta.component";
 import { connect } from "react-redux";
 import BlocksDispatcher from "../../Store/Blocks/Blocks.dispatcher";
-import { withRouter } from "../../Utils/WithRouter";
-import Header from "./Header.component";
 
-const BLOCK_KEY = "header";
+const BLOCK_KEY = "meta";
 
 export const mapStateToProps = (state) => ({
   block: state.blockReducer,
@@ -13,8 +12,7 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   getBlock: () => BlocksDispatcher.getBlocksList(dispatch, BLOCK_KEY),
 });
-
-class HeaderContainer extends Component {
+class MetaContainer extends Component {
   state = {};
 
   componentDidMount() {
@@ -23,10 +21,8 @@ class HeaderContainer extends Component {
   }
 
   render() {
-    return <Header {...this.props} />;
+    return <Meta />;
   }
 }
 
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(HeaderContainer)
-);
+export default connect(mapStateToProps, mapDispatchToProps)(MetaContainer);

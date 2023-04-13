@@ -56,7 +56,7 @@
         }
       }
       .Center {
-        padding: 45px 0;
+        padding: 34px 0;
         width: 33%;
         display: flex;
         flex-direction: column;
@@ -68,23 +68,36 @@
             padding-top: 14px;
             font-size: 16px;
 
-            &:hover {
-              color: #fff;
-              cursor: pointer;
-              border-bottom: 1px solid #fff;
-              transition: 0.4s;
-              width: fit-content;
+            a {
+              text-decoration: none;
+              color: #999;
+
+              &:hover {
+                color: #fff;
+                cursor: pointer;
+                border-bottom: 1px solid #fff;
+                transition: 0.4s;
+                width: fit-content;
+              }
+            }
+
+            &:first-child {
+              padding-top: 0;
             }
           }
         }
       }
 
       .Right-Side {
-        padding: 45px 0;
+        padding: 30px 0;
         display: flex;
         flex-direction: column;
         width: 33%;
         margin: 0 auto;
+        .Address {
+          line-height: 22px;
+          text-transform: capitalize;
+        }
         .Details-Wrapper {
           display: flex;
           gap: 10px;
@@ -97,9 +110,6 @@
       display: flex;
       justify-content: space-between;
       margin-top: 2rem;
-      .Copy-Rights {
-        // color: #fff;
-      }
 
       .Social-Media {
         display: flex;
