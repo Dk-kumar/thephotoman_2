@@ -1,8 +1,19 @@
+@import "../../Styles/media";
+
+
 .video-player {
   position: relative;
   padding-bottom: 30.25%; /* 16:9 */
   height: 0;
   margin: 3rem 10rem 0rem;
+
+  @include mobile {
+    margin: 2rem 0 0 ;
+    padding-bottom: 60.25%;
+  }
+  @include tablet {
+    margin: 20px;
+  }
 }
 #player {
   position: absolute;

@@ -1,11 +1,24 @@
+@import '../../Styles/media';
+
+
 .Recent-Storise-Container {
+  @include tablet {
+    padding: 0 20px;
+  }
   .Heading-Wrapper {
     text-align: center;
     padding: 4rem 0 3rem;
+    @include mobile {
+      padding: 2.5rem 0 1.5rem;
+    }
     .Heading {
       font-size: 1.8rem;
       letter-spacing: 3px;
       text-transform: uppercase;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
     }
   }
   .Card-Container {
@@ -13,7 +26,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    @include tablet {
+      gap: 1rem;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
     .Story-Card {
       display: flex;
       flex-direction: column;
@@ -21,12 +39,20 @@
       color: white;
       background-color: #243524;
       text-decoration: none;
+
+      @include tablet {
+        height: 480px;
+      }
       
       .Image {
         height: 21em;
         max-width: 100%;
         cursor: pointer;
         object-fit: cover;
+
+        @include mobile {
+          height: unset;
+        }
       }
 
       .Contend-Wrapper {
@@ -36,13 +62,22 @@
         justify-content: center;
         align-items: center;
         gap: 4px;
-
+        text-align: center;
+        @include mobile {
+          padding: 1rem 0 1.5rem 0;
+        }
         .Title {
           font-size: 26px;
           text-transform: uppercase;
           font-family: Cardo;
           letter-spacing: 1px;
           cursor: pointer;
+          @include mobile {
+            font-size: 22px;
+          }
+          @include tablet {
+            font-size: 22px;
+          }
         }
 
         .Location {

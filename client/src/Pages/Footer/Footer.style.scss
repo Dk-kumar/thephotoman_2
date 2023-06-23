@@ -1,3 +1,5 @@
+@import "../../Styles/media";
+
 .Footer-Container {
   background-image: url(../../Shared/Footer_Bg.jpg);
   background-position: center center;
@@ -6,6 +8,10 @@
   background-attachment: scroll;
   position: relative;
   margin-top: 3rem;
+  
+  @include mobile{
+    display: none;
+  }
 
   &::before {
     background: #1b1b1b;
@@ -26,10 +32,18 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 1290px;
+
+    @include tablet {
+      padding-bottom: 1rem;
+    }
     .Row {
       display: flex;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      @include mobile {
+        flex-direction: column;
+      }
 
       .Title {
         color: #fff;
@@ -46,9 +60,23 @@
         border-right: 1px solid rgba(255, 255, 255, 0.1);
         display: flex;
         align-items: center;
+
+        @include tablet {
+          padding-right: unset;
+          width: 30%;
+          justify-content: center;
+        }
+
+        @include mobile {
+          padding-right: unset;
+        }
         .Footer-Logo {
           width: 300px;
           margin-bottom: 20px;
+
+          @include tablet {
+            width: 200px;
+          }
 
           .Logo-Image {
             max-width: 100%;
@@ -62,6 +90,15 @@
         flex-direction: column;
         align-items: center;
         border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+        @include tablet {
+          width: 30%;
+        }
+        @include mobile {
+          padding: unset;
+          width:  unset;
+          align-items: unset;
+        }
         .Links-Wrapper {
           padding-left: 2rem;
           li {
@@ -94,6 +131,14 @@
         flex-direction: column;
         width: 33%;
         margin: 0 auto;
+        @include tablet {
+          width: 30%;
+        }
+        
+        @include mobile {
+          width:  unset;
+        }
+        
         .Address {
           line-height: 22px;
           text-transform: capitalize;
@@ -111,6 +156,15 @@
       justify-content: space-between;
       margin-top: 2rem;
 
+      @include tablet {
+        margin-top: 1rem;
+        padding: 0 20px;
+        align-items: center;
+      }
+
+      @include mobile {
+        flex-direction: column;
+      }
       .Social-Media {
         display: flex;
         gap: 12px;
@@ -126,5 +180,16 @@
         }
       }
     }
+  }
+}
+
+.Copy-Rights-Mobile {
+  background-color: #030303fb;
+  color: whitesmoke;
+  padding-bottom: .5rem;
+  text-align: center;
+  letter-spacing: 2px;
+  @include after-mobile {
+    display: none;
   }
 }

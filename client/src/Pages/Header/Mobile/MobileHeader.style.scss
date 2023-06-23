@@ -1,0 +1,104 @@
+@import "../../../Styles/media";
+
+
+.header-container {
+  // display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  padding:1.5rem;
+  // margin-top: 12%;
+  z-index: 1000;
+  display: none;
+
+  @include mobile {
+    display: flex;
+    width: calc(100% - 3rem);
+  }
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    .header-logo {
+      height: 100%;
+      width: 150px;
+    }
+  }
+
+  .sidenav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0%;
+    z-index: 9999;
+    overflow-y: scroll;
+    // padding: 1.875rem 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 0.3s;
+
+    span {
+      font-size: 14px;
+      display: block;
+      text-transform: uppercase;
+      font-family: Cardo Regular;
+      line-height: 1.35em;
+      font-weight: normal;
+      letter-spacing: 4px;
+      transition: 0.3s;
+    }
+
+    .top-area {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 0.875rem;
+      width: calc(100% - 4rem);
+      margin-bottom: 1.625rem;
+      border-bottom: 1px solid;
+      padding-top: 1.5rem;
+    }
+
+    .bottom-area {
+      // width: 100%;
+      // padding: 0 4rem;
+      padding-right: 5rem;
+      row-gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .flex-grow {
+      flex-grow: 1;
+    }
+
+    .social-icons {
+      // padding: 0 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-shrink: 0;
+      transition: width ease 0.5s;
+      cursor: pointer;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.NotHomeMob {
+  position: relative;
+  padding: 0;
+  margin: auto;
+}

@@ -1,4 +1,12 @@
+@import "../../Styles/media";
+
 .Header-Container {
+
+  
+  display: none;
+  @include after-mobile {
+    display: block;
+  }
   position: absolute;
   z-index: 1;
   width: 100%;

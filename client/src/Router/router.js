@@ -9,7 +9,7 @@ import AboutContainer from "../Pages/About/About.container";
 import ContactUsContainer from "../Pages/ContactUs/ContactUs.container";
 
 const LayOut = () => {
-  if (window.innerWidth <= 1200) return <Home />;
+  // if (window.innerWidth <= 1200) return <Home />;
 
   return (
     <>

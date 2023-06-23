@@ -18,7 +18,7 @@ class BannerSlider extends Component {
       <div id="react-slick">
         <Slider
           autoplay={true}
-          autoplaySpeed={3500}
+          autoplaySpeed={2000}
           arrows={false}
           fade={true}
           infinite={true}

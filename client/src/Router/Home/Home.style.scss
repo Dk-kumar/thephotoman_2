@@ -1,14 +1,14 @@
 .Home-Container {
   display: block;
   @media (max-width: 1200px) {
-    display: none;
+    // display: none;
   }
   .Banner-Wrapper {
   }
 }
 
 .Mobile-View {
-  display: none;
+  // display: none;
   @media (max-width: 1200px) {
     display: block;
   }

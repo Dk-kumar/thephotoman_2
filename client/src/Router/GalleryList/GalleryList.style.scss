@@ -1,9 +1,19 @@
+@import "../../Styles/media";
+
 .GalleryList-Container {
   .Base-Image-Wrapper {
       margin-top: 10px;
     .Image-Container {
       width: 800px;
       margin: auto;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      @include tablet {
+        width: 100%;
+      }
       .Image {
         max-width: 100%;
       }
@@ -15,6 +25,15 @@
     .Image-Container {
       width: 800px;
       margin: auto;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      @include tablet {
+        width: 100%;
+      }
+
       .Image {
         max-width: 100%;
       }

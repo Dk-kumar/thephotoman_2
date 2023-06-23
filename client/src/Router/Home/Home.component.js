@@ -10,9 +10,9 @@ class Home extends Component {
   render() {
     return (
       <>
-      <div className="Mobile-View">
+      {/* <div className="Mobile-View">
         <InProgress />
-      </div>
+      </div> */}
         <div className="Home-Container">
           <div className="Banner-Wrapper">{this.renderBannerSlider()}</div>
         </div>

@@ -102,18 +102,27 @@ class Footer extends Component {
     );
   }
 
+  renderMobileFooter() {
+    return (
+      <p className="Copy-Rights-Mobile">Copyright © 2023 by ThePhotoman.</p>
+    );
+  }
+
   render() {
     return (
-      <footer className="Footer-Container">
-        <div className="Footer-Wrapper">
-          <div className="Row">
-            {this.renderAbout()}
-            {this.renderLinks()}
-            {this.contactUs()}
+      <>
+        <footer className="Footer-Container">
+          <div className="Footer-Wrapper">
+            <div className="Row">
+              {this.renderAbout()}
+              {this.renderLinks()}
+              {this.contactUs()}
+            </div>
+            {this.footerBottom()}
           </div>
-          {this.footerBottom()}
-        </div>
-      </footer>
+        </footer>
+        {this.renderMobileFooter()}
+      </>
     );
   }
 }
