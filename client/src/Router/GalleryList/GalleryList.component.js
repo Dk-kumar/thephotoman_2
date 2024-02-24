@@ -9,24 +9,29 @@ class GalleryList extends Component {
   state = {};
 
   renderBaseImages() {
+    // const {
+    //   galleryLitsData: { galleryList },
+    // } = this.props;
     const {
-      galleryLitsData: { galleryList },
-    } = this.props;
-
+      galleryList: { images } = {}
+   } = this.props;
+console.log(this.props)
     return (
       <>
         <div className="Base-Image-Wrapper">
-          {galleryList.map((res) => {
+          {images?.map((res) => {
             return (
               <div className="Image-Container">
                 <Fancybox>
                   <a
                     data-fancybox="gallery"
-                    href={`${mediaURL}${res.attributes.base_image.data.attributes.url}`}
+                    // href={`${mediaURL}${res.attributes.base_image.data.attributes.url}`}
+                    href={res}
                   >
                     <img
                       className="Image"
-                      src={`${mediaURL}${res.attributes.base_image.data.attributes.url}`}
+                      // src={`${mediaURL}${res.attributes.base_image.data.attributes.url}`}
+                      src={res}
                       alt="wedding"
                     />
                   </a>
@@ -41,29 +46,35 @@ class GalleryList extends Component {
   }
 
   renderCollectionImages() {
+    // const {
+    //   galleryLitsData: { galleryList = [] },
+    // } = this.props;
+
     const {
-      galleryLitsData: { galleryList = [] },
-    } = this.props;
+      galleryList: { images} = {}
+   } = this.props;
 
-    if (galleryList.length === 0) return;
+    if (images?.length) return;
 
-    const [{ attributes: { image_collections: { data } = {} } = {} }] =
-      galleryList;
+    // const [{ attributes: { image_collections: { data } = {} } = {} }] =
+    //   galleryList;
 
     return (
       <>
         <div className="Image-Collection-Container">
-          {data?.map((imageList) => {
+          {images?.map((imageList) => {
             return (
               <div className="Image-Container">
                 <Fancybox>
                   <a
                     data-fancybox="gallery"
-                    href={`${mediaURL}${imageList.attributes.url}`}
+                    // href={`${mediaURL}${imageList.attributes.url}`}
+                    href={imageList}
                   >
                     <img
                       className="Image"
-                      src={`${mediaURL}${imageList.attributes.url}`}
+                      // src={`${mediaURL}${imageList.attributes.url}`}
+                       href={imageList}
                       alt="wedding"
                     />
                   </a>
@@ -82,7 +93,7 @@ class GalleryList extends Component {
     } = this.props;
     return (
       <>
-        {!isLoading ? (
+        {false ? (
           <Loader type={Banner} />
         ) : (
           <div className="GalleryList-Container">{this.renderBaseImages()}</div>

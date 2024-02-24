@@ -14,7 +14,7 @@ export const mapDispatchToProps = (dispatch) => ({
 class BannerSliderContainer extends Component {
   componentDidMount() {
     const { getCollections } = this.props;
-    getCollections();
+    // getCollections();
   }
 
   render() {

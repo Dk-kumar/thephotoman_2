@@ -31,7 +31,7 @@ class Footer extends Component {
           {links.map((link) => {
             return (
               <li key={link.id}>
-                <Link to={`/gallery/${link.title.toLowerCase()}`}>
+                <Link to={link.url}>
                   {link.title}
                 </Link>
               </li>

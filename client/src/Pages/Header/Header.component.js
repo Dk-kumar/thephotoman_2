@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { mediaURL } from "../../Utils/EndPoints";
+import { headerData } from "../../mock/header";
+import photoManWhite from "../../Shared/photoManWhite.png";
+
+
 import "./Header.style.scss";
 
 const HomePageURL = "/";
@@ -12,7 +16,8 @@ class Header extends Component {
         <img
           className="Image"
           loading="lazy"
-          src={`${mediaURL}${src}`}
+          // src={`${mediaURL}${src}`}
+          src={photoManWhite}
           alt={alt}
         />
       </div>
@@ -25,7 +30,7 @@ class Header extends Component {
 
     return (
       <nav className="Nav">
-        {Nav_Links?.Nav_Links?.map((navLink) => {
+        {headerData?.attributes?.Nav_Links?.map((navLink) => {
           return (
             <Link to={`${navLink.url}`} className="Nav-Links">
               {navLink.name !== "Logo"

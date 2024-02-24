@@ -20,7 +20,7 @@ class HeaderContainer extends Component {
 
   componentDidMount() {
     const { getBlock } = this.props;
-    getBlock();
+    // getBlock();
   }
 
   findingRouter() {

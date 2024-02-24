@@ -5,6 +5,7 @@ import CollectionsContainer from "../Collections/Collections.container";
 import Loader from "../Loader/Loader.component";
 import { Banner } from "../Loader/LoaderTypes";
 import "./BannerSlider.style.scss";
+import { bannerData } from "../../mock/banner";
 
 class BannerSlider extends Component {
   renderSlider() {
@@ -23,13 +24,13 @@ class BannerSlider extends Component {
           fade={true}
           infinite={true}
         >
-          {data.map(({ id, attributes: { name, url: imgURL } }) => {
+          {bannerData.data.map(({ id, url: imgURL }) => {
             return (
               <img
                 className="banner-slider"
                 key={id}
-                src={`${mediaURL}${imgURL}`}
-                alt={name}
+                src={imgURL}
+                alt={'bannerImage'}
                 loading="lazy"
               />
             );
@@ -45,8 +46,9 @@ class BannerSlider extends Component {
     } = this.props;
 
     return (
+      //once api is ready need change false here
       <>
-        {!isLoading ? (
+        {false ? (
           <Loader type={Banner} />
         ) : (
           <>

@@ -4,6 +4,7 @@ import { mediaURL } from "../../Utils/EndPoints";
 import YouTubeWidget from "../YouTubeWidget/YouTubeWidget.component";
 import "./Collections.style.scss";
 import { Link } from "react-router-dom";
+import { collectionData } from "../../mock/collection";
 
 class Collections extends Component {
   renderHeading() {
@@ -30,11 +31,11 @@ class Collections extends Component {
       <>
         {this.renderHeading()}
         <div className="Card-Container">
-          {collectionList.map((res) => {
+          {collectionData.map((res) => {
             return (
               <Link to={`/gallery/${res.attributes.name}`} className="Collections-Card" key={res.id}>
                 <img
-                  src={`${mediaURL}${res.attributes.image.data.attributes.url}`}
+                  src={res.attributes.image.data.url}
                   alt="name"
                   className="Image"
                   loading="lazy"

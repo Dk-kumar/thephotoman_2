@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { mediaURL } from "../../Utils/EndPoints";
 import "./RecentStorys.style.scss";
+import { recentStoriesData } from "../../mock/recentStories";
 
 class RecentStorys extends Component {
   renderHeading() {
@@ -18,11 +19,11 @@ class RecentStorys extends Component {
       <>
         {this.renderHeading()}
         <div className="Card-Container">
-          {storiesList.map((res) => {
+          {recentStoriesData.map((res) => {
             return (
               <Link to={`/galleryList/${res.id}`} className="Story-Card" key={res.id}>
                 <img
-                  src={`${mediaURL}${res.attributes.base_image.data.attributes.url}`}
+                  src={res.attributes.base_image.data.url}
                   alt="name"
                   className="Image"
                   loading="lazy"

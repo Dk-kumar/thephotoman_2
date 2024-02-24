@@ -13,7 +13,7 @@ export const mapDispatchToProps = (dispatch) => ({
 class RecentStorysContainer extends Component {
   componentDidMount() {
     const { getStoriesList } = this.props;
-    getStoriesList();
+    // getStoriesList();
   }
   render() {
     return <RecentStorys { ...this.props } />;

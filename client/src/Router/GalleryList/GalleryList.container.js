@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import GalleryDispatcher from "../../Store/Gallery/Gallery.dispatcher";
 import { withRouter } from "../../Utils/WithRouter";
 import GalleryList from "./GalleryList.component";
+import { galleryListData } from "../../mock/galleryList";
 
 const Query = `[id]=`;
 
@@ -16,7 +17,9 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 class GalleryListContainer extends Component {
-  state = {};
+  state = {
+    galleryList: {}
+  };
 
   componentDidMount() {
     this.getGalleryListCollection();
@@ -39,10 +42,15 @@ class GalleryListContainer extends Component {
     } = this.props;
 
     const filterKey = pathname?.slice(pathname.lastIndexOf("/") + 1);
-    getGalleryList(filterKey);
+    debugger
+    const filterData = galleryListData[filterKey]
+    this.setState({
+      galleryList: filterData
+    })
+    // getGalleryList(filterKey);
   }
   render() {
-    return <GalleryList {...this.props} />;
+    return <GalleryList {...this.props} {...this.state} />;
   }
 }
 

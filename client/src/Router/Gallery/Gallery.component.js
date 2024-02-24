@@ -12,12 +12,15 @@ class Gallery extends Component {
   state = {};
 
   renderBaseGallery() {
+    // const {
+    //   gallery: { galleryList = [] },
+    // } = this.props;
+
     const {
-      gallery: { galleryList = [] },
+       galleryList = [] ,
     } = this.props;
 
     return galleryList?.map((galleryList, index) => {
-      console.log(galleryList)
       if (!index) {
         return (
           <>
@@ -25,7 +28,7 @@ class Gallery extends Component {
               <Link to={`/galleryList/${galleryList.id}`} className="Gallery-Wrapper">
                 <img
                   className="Image"
-                  src={`${mediaURL}${galleryList.attributes.base_image.data.attributes.url}`}
+                  src={galleryList.attributes.base_image.data.attributes.url}
                   alt="wedding"
                   loading="lazy"
                 />
@@ -47,9 +50,12 @@ class Gallery extends Component {
   }
 
   renderGalleryChild() {
+    // const {
+    //   gallery: { galleryList = [] },
+    // } = this.props;
     const {
-      gallery: { galleryList = [] },
-    } = this.props;
+      galleryList = [] ,
+   } = this.props;
 
     return (
       <>
@@ -63,7 +69,7 @@ class Gallery extends Component {
               >
                 <img
                   className="Image"
-                  src={`${mediaURL}${galleryList.attributes.base_image.data.attributes.url}`}
+                  src={galleryList.attributes.base_image.data.attributes.url}
                   alt="wedding"
                   loading="lazy"
                 />
@@ -95,7 +101,7 @@ class Gallery extends Component {
 
     return (
       <>
-        {!isLoading ? (
+        {false ? (
           <Loader type={Banner} />
         ) : (
           <>

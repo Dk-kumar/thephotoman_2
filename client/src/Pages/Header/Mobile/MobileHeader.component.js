@@ -15,6 +15,8 @@ import {
   searchIcon,
 } from "../../../Utils/Icons";
 import "./MobileHeader.style.scss";
+import { headerData } from "../../../mock/header";
+
 
 const HomePageURL = "/";
 
@@ -57,7 +59,7 @@ class MobileHeader extends Component {
     const { handleMenu } = this.props;
     const { block: { blockList = [{}] } = {} } = this.props;
     const [{ attributes: Nav_Links } = {}] = blockList;
-    const links = Nav_Links?.Nav_Links.filter((res) => res.url !== "/");
+    // const links = headerData?.Nav_Links.filter((res) => res.url !== "/");
 
     return (
       <div id="sidenav" className="sidenav">
@@ -71,7 +73,7 @@ class MobileHeader extends Component {
           <Link to={HomePageURL}>
             <span onClick={handleMenu}>{"Home"}</span>
           </Link>
-          {links?.map((elem, index) => {
+          {headerData?.attributes?.Nav_Links.map((elem, index) => {
             return (
               <Link to={`${elem.url}`} key={index} className="nav-links">
                 <span onClick={handleMenu}>{elem.name}</span>

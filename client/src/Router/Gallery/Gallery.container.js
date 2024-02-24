@@ -3,6 +3,11 @@ import { connect } from "react-redux";
 import Gallery from "./Gallery.component";
 import GalleryDispatcher from "../../Store/Gallery/Gallery.dispatcher";
 import { withRouter } from "../../Utils/WithRouter";
+import { weddingGalleryData } from "../../mock/gallery/weddingGallery";
+import { babyShootGalleryData } from "../../mock/gallery/babyShootGallery";
+import { maternityGalleryData } from "../../mock/gallery/maternityGallery";
+import { outdoorGalleryData } from "../../mock/gallery/outdoorGallery";
+
 
 const Query = `[galleries][name]=`;
 
@@ -16,7 +21,9 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 class GalleryContainer extends Component {
-  state = {};
+  state = {
+    galleryList: []
+  };
 
   componentDidMount() {
     this.getGallerysCollection();
@@ -39,11 +46,23 @@ class GalleryContainer extends Component {
     } = this.props;
     const filterKey = pathname?.slice(pathname.lastIndexOf("/") + 1);
 
-    getGallerys(filterKey);
+    const galleryObject = {
+      'wedding': weddingGalleryData,
+      'babyshoot': babyShootGalleryData,
+      'maternity': maternityGalleryData,
+      'outdoor': outdoorGalleryData
+    }
+    
+    const filterData = galleryObject[filterKey.toLowerCase()]
+    console.log(filterData)
+    this.setState({
+      galleryList: filterData
+    })
+    // getGallerys(filterKey);
   }
 
   render() {
-    return <Gallery {...this.props} />;
+    return <Gallery {...this.props} {...this.state} />;
   }
 }
 
