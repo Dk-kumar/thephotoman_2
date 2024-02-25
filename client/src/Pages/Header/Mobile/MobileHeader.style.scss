@@ -10,6 +10,7 @@
   // margin-top: 12%;
   z-index: 1000;
   display: none;
+  top: 2rem;
 
   @include mobile {
     display: flex;
@@ -20,10 +21,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    // height: 150px;
     .header-logo {
       height: 100%;
-      width: 150px;
+      width: 216px;
     }
   }
 
@@ -62,7 +63,7 @@
       width: calc(100% - 4rem);
       margin-bottom: 1.625rem;
       border-bottom: 1px solid;
-      padding-top: 1.5rem;
+      padding-top: 3.5rem;
     }
 
     .bottom-area {
@@ -99,6 +100,7 @@
 
 .NotHomeMob {
   position: relative;
-  padding: 0;
+  padding: 2rem 1.5rem;
   margin: auto;
+  top: 0
 }

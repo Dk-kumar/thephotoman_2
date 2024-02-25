@@ -23,6 +23,7 @@ class GalleryListContainer extends Component {
 
   componentDidMount() {
     this.getGalleryListCollection();
+    window.scrollTo(0, 0);
   }
 
   componentDidUpdate(prevProps) {
@@ -42,7 +43,6 @@ class GalleryListContainer extends Component {
     } = this.props;
 
     const filterKey = pathname?.slice(pathname.lastIndexOf("/") + 1);
-    debugger
     const filterData = galleryListData[filterKey]
     this.setState({
       galleryList: filterData

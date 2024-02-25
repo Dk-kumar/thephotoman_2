@@ -27,6 +27,7 @@ class GalleryContainer extends Component {
 
   componentDidMount() {
     this.getGallerysCollection();
+    window.scrollTo(0, 0);
   }
 
   componentDidUpdate(prevProps) {

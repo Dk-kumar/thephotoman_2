@@ -38,6 +38,7 @@ class HeaderContainer extends Component {
     const { isOpenNav } = this.state;
     const sideNav = document.getElementById("sidenav");
     isOpenNav ? (sideNav.style.width = "100%") : (sideNav.style.width = "0%");
+    isOpenNav ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
     this.setState({
       isOpenNav: !isOpenNav,
     });

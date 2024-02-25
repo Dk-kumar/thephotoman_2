@@ -6,6 +6,7 @@ import Loader from "../Loader/Loader.component";
 import { Banner } from "../Loader/LoaderTypes";
 import "./BannerSlider.style.scss";
 import { bannerData } from "../../mock/banner";
+import { mobileBannerData } from "../../mock/banner/mobileBanner";
 
 class BannerSlider extends Component {
   renderSlider() {
@@ -14,6 +15,8 @@ class BannerSlider extends Component {
         sliderImage: { data },
       },
     } = this.props;
+
+    const bannerSliderData = window.innerWidth <= 768 ? mobileBannerData :  bannerData
 
     return (
       <div id="react-slick">
@@ -24,7 +27,7 @@ class BannerSlider extends Component {
           fade={true}
           infinite={true}
         >
-          {bannerData.data.map(({ id, url: imgURL }) => {
+          {bannerSliderData?.data.map(({ id, url: imgURL }) => {
             return (
               <img
                 className="banner-slider"

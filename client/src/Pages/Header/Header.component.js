@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { mediaURL } from "../../Utils/EndPoints";
 import { headerData } from "../../mock/header";
-import photoManWhite from "../../Shared/photoManWhite.png";
-
-
+// import photoManWhite from "../../Shared/photoManWhite.png";
 import "./Header.style.scss";
+
+const photoManWhite = 'https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708879829/Photo%20Man/Logo/gwce0jagtzpqhd5mxr9k.png'
 
 const HomePageURL = "/";
 class Header extends Component {

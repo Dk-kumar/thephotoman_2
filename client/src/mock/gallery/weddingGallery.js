@@ -2,14 +2,14 @@ export const weddingGalleryData = [
     {
         id: 1,
         attributes: {
-          title: "deepan + kumar",
+          title: "Arun + Meena",
           description: "Art is expression of feelings, moments and our own perception of life!\nYour art, your rules, don’t let anyone over make you doubt that!",
           location: "Wedding in Chennai",
             base_image: {
                 data: {
                     id: 106,
                     attributes: {
-                        url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
+                        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708878917/Photo%20Man/Wedding%20Shoot/Arun_Meena%20-%20COIMBATORE/oo0f9gtgqedkuk02u1fr.jpg",
                     }
                 }
             },
@@ -18,19 +18,19 @@ export const weddingGalleryData = [
                     {
                         id: 101,
                         attributes: {
-                            url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
+                            url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708879062/Photo%20Man/Wedding%20Shoot/Arun_Meena%20-%20COIMBATORE/jwflkg048eehimccrjss.jpg",
                         }
                     },
                     {
                         id: 105,
                         attributes: {
-                            url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
+                            url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708879020/Photo%20Man/Wedding%20Shoot/Arun_Meena%20-%20COIMBATORE/ojtjerrbgsvcgurcn18t.jpg",
                         }
                     },
                     {
                         id: 104,
                         attributes: {
-                            url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
+                            url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708878947/Photo%20Man/Wedding%20Shoot/Arun_Meena%20-%20COIMBATORE/zfphsh0lmrldsr7unpzq.jpg",
                         }
                     },
                     {
@@ -112,14 +112,14 @@ export const weddingGalleryData = [
     {
         id: 2,
         attributes: {
-          title: "deepan + kumar",
+          title: "Karthi + Anjana",
           description: "Art is expression of feelings, moments and our own perception of life!\nYour art, your rules, don’t let anyone over make you doubt that!",
-          location: "Wedding in Chennai",
+          location: "Wedding in Erode",
             base_image: {
                 data: {
                     id: 106,
                     attributes: {
-                        url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
+                        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708878651/Photo%20Man/Wedding%20Shoot/Anjana_Karthi%20-%20ERODE/d7igypr5h8ka0yz6lqsr.jpg",
                     }
                 }
             },

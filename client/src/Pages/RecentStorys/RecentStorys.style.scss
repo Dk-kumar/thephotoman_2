@@ -45,10 +45,11 @@
       }
       
       .Image {
-        height: 21em;
+        height: 20.5em;
         max-width: 100%;
         cursor: pointer;
         object-fit: cover;
+        // background: whitesmoke;
 
         @include mobile {
           height: unset;

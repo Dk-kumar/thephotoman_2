@@ -66,7 +66,7 @@ class Footer extends Component {
   copyRights() {
     return (
       <p className="Copy-Rights">
-        Copyright © 2023 by ThePhotoman. All rights reserved.
+        Copyright © {new Date().getFullYear()} by ThePhotoman. All rights reserved.
       </p>
     );
   }
@@ -104,7 +104,7 @@ class Footer extends Component {
 
   renderMobileFooter() {
     return (
-      <p className="Copy-Rights-Mobile">Copyright © 2023 by ThePhotoman.</p>
+      <p className="Copy-Rights-Mobile">Copyright © {new Date().getFullYear()} by ThePhotoman.</p>
     );
   }
 

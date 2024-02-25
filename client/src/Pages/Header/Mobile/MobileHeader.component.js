@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import photoManWhite from "../../../Shared/photoManWhite.png";
-import photoManBlack from "../../../Shared/photoManBlack.png";
+// import photoManWhite from "../../../Shared/photoManWhite.png";
+// import photoManBlack from "../../../Shared/photoManBlack.png";
 
 import {
   menuIcon,
@@ -19,8 +19,14 @@ import { headerData } from "../../../mock/header";
 
 
 const HomePageURL = "/";
+const photoManWhite = 'https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708879829/Photo%20Man/Logo/gwce0jagtzpqhd5mxr9k.png'
+const photoManBlack = "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708879823/Photo%20Man/Logo/otm7avq6di3ctijntuof.png"
 
 class MobileHeader extends Component {
+  goBack() {
+    window.history.back();
+  }
+  
   headerLogo() {
     const { handleMenu, findingRouter } = this.props;
     const {
@@ -35,7 +41,7 @@ class MobileHeader extends Component {
         className={`header-container ${isHome ? "NotHomeMob" : "InHomeMob"}`}
       >
         <div className="search">{mapState && searchIcon()}</div>
-        <div className="search">{!mapState && backIcon()}</div>
+        <div className="goBack" onClick={() => this.goBack()}>{!mapState && backIcon()}</div>
         <div className="logo">
           {/* <img src={ mapState ? logo() : blackLogo()} alt="logo" className="header-logo" /> */}
           <Link to={HomePageURL}>
@@ -63,17 +69,18 @@ class MobileHeader extends Component {
 
     return (
       <div id="sidenav" className="sidenav">
-        <div className="top-area" onClick={handleMenu}>
+        <div className="top-area">
           <div className="logo">
             <img src={photoManBlack} alt="logo" className="header-logo" />
           </div>
-          <span className="closebtn">{closeIcon()}</span>
+          <span onClick={handleMenu} className="closebtn">{closeIcon()}</span>
         </div>
         <ul className="bottom-area">
           <Link to={HomePageURL}>
             <span onClick={handleMenu}>{"Home"}</span>
           </Link>
           {headerData?.attributes?.Nav_Links.map((elem, index) => {
+			if (elem.name?.includes('Logo')) return null
             return (
               <Link to={`${elem.url}`} key={index} className="nav-links">
                 <span onClick={handleMenu}>{elem.name}</span>

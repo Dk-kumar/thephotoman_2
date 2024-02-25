@@ -10,7 +10,9 @@
   position: absolute;
   z-index: 1;
   width: 100%;
-  margin: 2rem 0;
+  // margin: 2rem 0;
+  top:  5.5rem;
+
   .Nav {
     display: flex;
     justify-content: center;
@@ -30,7 +32,7 @@
         font-size: 16px;
       }
       .Image-Wrapper {
-        width: 170px;
+        width: 310px;
         @media (min-width: 767px) and (max-width: 1440px) {
           width: 280px;
         }
@@ -43,7 +45,7 @@
 }
 
 .NotHome {
-  margin: 0;
+  top: 0;
   background: black;
   position: relative;
   padding: 1rem 0;
