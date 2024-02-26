@@ -5,7 +5,7 @@ class InProgress extends Component {
   InProgressText() {
     return (
       <div className="Text">
-        <p className="Desktop-View">Enable desktop view</p>
+        {/* <p className="Desktop-View">Enable desktop view</p> */}
         <p className="In-Progress-Text">In Progress</p>
       </div>
     );
