@@ -15,34 +15,6 @@ export const babyShootGalleryData = [
                     }
                 }
             },
-            // image_collections: {
-            //     data: [
-            //         {
-            //             id: 101,
-            //             attributes: {
-            //                 url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
-            //             }
-            //         },
-            //         {
-            //             id: 105,
-            //             attributes: {
-            //                 url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
-            //             }
-            //         },
-            //         {
-            //             id: 104,
-            //             attributes: {
-            //                 url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
-            //             }
-            //         },
-            //         {
-            //             id: 100,
-            //             attributes: {
-            //                 url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
-            //             }
-            //         }
-            //     ]
-            // },
         }
     },
     {
@@ -59,34 +31,6 @@ export const babyShootGalleryData = [
                     }
                 }
             },
-            // image_collections: {
-            //     data: [
-            //         {
-            //             id: 101,
-            //             attributes: {
-            //                 url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
-            //             }
-            //         },
-            //         {
-            //             id: 105,
-            //             attributes: {
-            //                 url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
-            //             }
-            //         },
-            //         {
-            //             id: 104,
-            //             attributes: {
-            //                 url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
-            //             }
-            //         },
-            //         {
-            //             id: 100,
-            //             attributes: {
-            //                 url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
-            //             }
-            //         }
-            //     ]
-            // },
         }
     },
     {
@@ -100,6 +44,38 @@ export const babyShootGalleryData = [
                     id: 1,
                     attributes: {
                         url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708879467/Photo%20Man/Baby%20Shoot/Ivaan/tdsowrpeqmjrc8chwcth.jpg",
+                    }
+                }
+            }
+        }
+    },
+    {
+        id: 24,
+        attributes: {
+          title: "Ganavi",
+          description: "Art is expression of feelings, moments and our own perception of life!\nYour art, your rules, don’t let anyone over make you doubt that!",
+          location: "Baby shoot in Tirupur",
+            base_image: {
+                data: {
+                    id: 1,
+                    attributes: {
+                        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709366229/Photo%20Man/Baby%20Shoot/Ganavi/xzrc1ngqu5wpuvjvz3tw.jpg",
+                    }
+                }
+            }
+        }
+    },
+    {
+        id: 25,
+        attributes: {
+          title: "Maha",
+          description: "Art is expression of feelings, moments and our own perception of life!\nYour art, your rules, don’t let anyone over make you doubt that!",
+          location: "Baby shoot in Tirupur",
+            base_image: {
+                data: {
+                    id: 1,
+                    attributes: {
+                        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709366597/Photo%20Man/Baby%20Shoot/Maha/chmvhjtxv8hspberdnrl.jpg",
                     }
                 }
             }

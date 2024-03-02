@@ -14,7 +14,7 @@ export const mobileBannerData = {
       },
       {
         id: 4,
-        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708884377/Photo%20Man/Banner/Mobile%20banner/uhlmvd3xuooxdv7tklsk.jpg",
+        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709378689/Photo%20Man/Banner/Mobile%20banner/d1ytflou7xsuzvyi1k5x.jpg",
       },
       {
         id: 5,
@@ -22,7 +22,7 @@ export const mobileBannerData = {
       },
       {
         id: 6,
-        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708884285/Photo%20Man/Banner/Mobile%20banner/bzegz2zyrbnvgrhdw0x1.jpg",
+        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709378563/Photo%20Man/Banner/Mobile%20banner/ezykshd5ez1rj2vssul1.jpg",
       }
     ],
   };
