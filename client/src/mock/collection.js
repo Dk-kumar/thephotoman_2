@@ -14,7 +14,7 @@ export const collectionData = [
     {
       id: 2,
       attributes: {
-        name: "BabyShoot",
+        name: "Baby Shoot",
         image: {
             data: {
                 id: 1,
@@ -26,7 +26,7 @@ export const collectionData = [
     {
       id: 3,
       attributes: {
-        name: "BabyShower",
+        name: "Baby Shower",
         image: {
             data: {
                 id: 1,

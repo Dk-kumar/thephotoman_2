@@ -29,7 +29,7 @@ export const headerData = {
       {
         id: 5,
         url: "/gallery/babyShower",
-        name: "BabyShower",
+        name: "Baby Shower",
       },
       {
         id: 6,
