@@ -32,7 +32,7 @@
 		line-height: 1.75rem;
 
 		@include mobile {
-			padding-inline: 2rem;
+			padding: 2rem;
 		}
 
 		.header {
@@ -40,6 +40,7 @@
 
 			h3 {
 				font-size: 1.75rem;
+				margin-block-end: 0.5rem;
 			}
 
 			span {
@@ -125,10 +126,12 @@
 
 			input,
 			textarea {
+				color: #fff;
 				width: 100%;
 				padding: 10px;
 				margin-bottom: 16px;
 				border: none;
+				font-size: 1rem;
 				background: transparent;
 				border-bottom: 1px solid #ccc;
 				box-sizing: border-box;
@@ -136,6 +139,10 @@
 				&:focus {
 					outline: none;
 					background-color: transparent;
+				}
+
+				@include mobile {
+					padding: 2px;
 				}
 			}
 

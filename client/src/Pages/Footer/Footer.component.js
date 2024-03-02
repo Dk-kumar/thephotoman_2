@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Logo_White from "../../Shared/Logo_White.png";
-import { email, Location, instagram, phone, youtube } from "../../Utils/Icons";
+import { email, Location, instagram, phone, youtube, facebook } from "../../Utils/Icons";
 import "./Footer.style.scss";
 
 class Footer extends Component {
@@ -80,6 +80,14 @@ class Footer extends Component {
           target="_blank"
         >
           {instagram()}
+        </a>
+        <a
+          className="Icons"
+          href="https://youtube.com/@thephotomanphotography4953"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {facebook()}
         </a>
         <a
           className="Icons"

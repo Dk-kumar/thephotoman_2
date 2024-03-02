@@ -33,7 +33,7 @@ class Collections extends Component {
         <div className="Card-Container">
           {collectionData.map((res) => {
             return (
-              <Link to={`/gallery/${res.attributes.name}`} className="Collections-Card" key={res.id}>
+              <Link to={`/gallery/${res.attributes.name.replace(/ +/g, "") }`} className="Collections-Card" key={res.id}>
                 <img
                   src={res.attributes.image.data.url}
                   alt="name"

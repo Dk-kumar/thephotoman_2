@@ -167,8 +167,13 @@
       }
       .Social-Media {
         display: flex;
-        gap: 12px;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-around;
+        flex-shrink: 0;
+        transition: width ease 0.5s;
         cursor: pointer;
+        padding-bottom: 20px;
 
         .Icons {
           svg {
@@ -186,7 +191,7 @@
 .Copy-Rights-Mobile {
   background-color: #030303fb;
   color: whitesmoke;
-  padding-bottom: .5rem;
+  padding-block: .5rem;
   text-align: center;
   letter-spacing: 2px;
   @include after-mobile {

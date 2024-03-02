@@ -26,11 +26,11 @@ export const collectionData = [
     {
       id: 3,
       attributes: {
-        name: "Baby Shower",
+        name: "Motherhood",
         image: {
             data: {
                 id: 1,
-                url: "https://res.cloudinary.com/dbcmfprjb/image/upload/v1708784801/z1fnnkqpzkdiu2j5xzgi.jpg",
+                url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709367312/Photo%20Man/Maternity/Ragavi/rip3ejml09l3zoexjzow.jpg",
             }
         }
       }

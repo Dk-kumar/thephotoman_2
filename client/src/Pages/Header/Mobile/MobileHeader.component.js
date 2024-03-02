@@ -90,10 +90,29 @@ class MobileHeader extends Component {
         </ul>
         <div className="flex-grow"></div>
         <div className="social-icons">
-          {instagram()}
-          {twitter()}
-          {facebook()}
-          {youtube()}
+          <a
+            className="Icons"
+            href=" https://instagram.com/thephotomanphotography?igshid=YmMyMTA2M2Y="
+            target="_blank"
+          >
+            {instagram()}
+          </a>
+          <a
+            className="Icons"
+            href="https://youtube.com/@thephotomanphotography4953"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {facebook()}
+          </a>
+          <a
+            className="Icons"
+            href="https://youtube.com/@thephotomanphotography4953"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {youtube()}
+          </a>
         </div>
       </div>
     );

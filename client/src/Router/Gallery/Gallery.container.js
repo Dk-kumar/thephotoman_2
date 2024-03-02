@@ -50,7 +50,7 @@ class GalleryContainer extends Component {
     const galleryObject = {
       'wedding': weddingGalleryData,
       'babyshoot': babyShootGalleryData,
-      'babyshower': maternityGalleryData,
+      'motherhood': maternityGalleryData,
       'outdoor': outdoorGalleryData
     }
     

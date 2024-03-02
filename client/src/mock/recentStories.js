@@ -35,7 +35,7 @@ export const recentStoriesData = [
       attributes: {
         title: "Prasanth & Nivi",
         description: "asnmdnm",
-        location: "Out door shoot in Coimbatore",
+        location: "Outdoor shoot in Coimbatore",
         base_image: {
             data: {
                 id: 1,

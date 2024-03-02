@@ -26,8 +26,8 @@ class FooterContainer extends Component {
       },
       {
         id: 5,
-        title: "BabyShower",
-        url: "/gallery/babyShower"
+        title: "Motherhood",
+        url: "/gallery/motherhood"
       },
       {
         id: 6,

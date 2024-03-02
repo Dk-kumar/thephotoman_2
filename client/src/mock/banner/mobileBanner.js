@@ -1,12 +1,13 @@
 export const mobileBannerData = {
     data: [
+
       {
         id: 1,
-        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708884339/Photo%20Man/Banner/Mobile%20banner/igktcmwg3gymzmsqxxfm.jpg",
+        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708884022/Photo%20Man/Banner/Mobile%20banner/qby6j0gwl58ypawhfas0.jpg",
       },
       {
         id: 2,
-        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708884022/Photo%20Man/Banner/Mobile%20banner/qby6j0gwl58ypawhfas0.jpg",
+        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709398581/Photo%20Man/Maternity/ROHINI_BOOPATHY%20-%20KAVA%20ISLAND/bdon4delq1z64dbhfazq.jpg",
       },
       {
         id: 3,
@@ -22,7 +23,7 @@ export const mobileBannerData = {
       },
       {
         id: 6,
-        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709378563/Photo%20Man/Banner/Mobile%20banner/ezykshd5ez1rj2vssul1.jpg",
+        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708884339/Photo%20Man/Banner/Mobile%20banner/igktcmwg3gymzmsqxxfm.jpg",
       }
     ],
   };

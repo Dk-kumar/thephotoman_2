@@ -28,8 +28,8 @@ export const headerData = {
       },
       {
         id: 5,
-        url: "/gallery/babyShower",
-        name: "Baby Shower",
+        url: "/gallery/motherhood",
+        name: "Motherhood",
       },
       {
         id: 6,

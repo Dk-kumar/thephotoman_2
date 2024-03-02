@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { email as emailIcon, instagram, youtube } from "../../Utils/Icons";
+import { email as emailIcon, instagram, youtube, facebook } from "../../Utils/Icons";
 import photoManWhite from "../../Shared/photoManWhite.png";
 import "./ContactUs.style.scss";
 
@@ -107,6 +107,14 @@ class ContactUs extends Component {
                   >
                     {instagram()}
                   </a>
+				  <a
+					className="Icons"
+					href="https://youtube.com/@thephotomanphotography4953"
+					target="_blank"
+					rel="noreferrer"
+					>
+					{facebook()}
+				  </a>
                   <a
                     className="Icons"
                     href="https://youtube.com/@thephotomanphotography4953"
