@@ -18,7 +18,7 @@ export const mobileBannerData = {
       },
       {
         id: 5,
-        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1708884186/Photo%20Man/Banner/Mobile%20banner/klogjstfhhtutuxbdhgv.jpg",
+        url: "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709370113/Photo%20Man/Out%20door/Vikram/cgnl5mjwoanwajg2llh0.jpg",
       },
       {
         id: 6,
