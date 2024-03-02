@@ -10,6 +10,12 @@ body {
   font-family: Cardo;
   -webkit-font-smoothing: antialiased;
   background: #fff;
+
+  &:has(.Contact-Container) {
+    .Footer-Container {
+      margin-top: 0;
+    }
+  }
 }
 
 html {
