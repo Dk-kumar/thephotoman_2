@@ -1,6 +1,7 @@
 @import "../../Styles/media";
 
 .Gallery-Container {
+  min-height: 100dvh;
   .Base-Gallery {
     display: flex;
     flex-direction: row-reverse;
