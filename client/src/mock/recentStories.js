@@ -5,7 +5,7 @@ export const recentStoriesData = [
     {
       id: 101,
       attributes: {
-        title: "Dhanabal + Kalaivani",
+        title: "Dhanabal & Kalaivani",
         description: "kmdmmckmvklvnlkvmlkklc",
         location: "Wedding in Coimbatore",
         base_image: {

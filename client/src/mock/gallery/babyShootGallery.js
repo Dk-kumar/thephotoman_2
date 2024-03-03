@@ -4,7 +4,7 @@ export const babyShootGalleryData = [
     {
         id: 21,
         attributes: {
-          title: "Akilan + Aadhiran",
+          title: "Akilan & Aadhiran",
           description: "Art is expression of feelings, moments and our own perception of life!\nYour art, your rules, don’t let anyone over make you doubt that!",
           location: "Baby shoot in Chennai",
             base_image: {

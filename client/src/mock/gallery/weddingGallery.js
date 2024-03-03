@@ -4,7 +4,7 @@ export const weddingGalleryData = [
     {
         id: 1,
         attributes: {
-          title: "Arun + Meena",
+          title: "Arun & Meena",
           description: "Art is expression of feelings, moments and our own perception of life!\nYour art, your rules, don’t let anyone over make you doubt that!",
           location: "Wedding in Chennai",
             base_image: {
@@ -20,7 +20,7 @@ export const weddingGalleryData = [
     {
         id: 2,
         attributes: {
-          title: "Karthi + Anjana",
+          title: "Karthi & Anjana",
           description: "Art is expression of feelings, moments and our own perception of life!\nYour art, your rules, don’t let anyone over make you doubt that!",
           location: "Wedding in Erode",
             base_image: {
