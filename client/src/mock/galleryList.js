@@ -159,7 +159,7 @@ export const galleryListData = {
       "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709398344/Photo%20Man/Maternity/AISHU_SIVA_COIMBATORE/vwdcufnh7er81hzwde0n.jpg",
       "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709398317/Photo%20Man/Maternity/AISHU_SIVA_COIMBATORE/eron9bor6axupnjpllxk.jpg",
       "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709398305/Photo%20Man/Maternity/AISHU_SIVA_COIMBATORE/fds1mimpcbus1hy112qo.jpg",
-      "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709398352/Photo%20Man/Maternity/AISHU_SIVA_COIMBATORE/lvh3an8cjyv0afpushqa.jpgg",
+      "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709398352/Photo%20Man/Maternity/AISHU_SIVA_COIMBATORE/lvh3an8cjyv0afpushqa.jpg",
       "https://res.cloudinary.com/dnmr1sbs3/image/upload/v1709398363/Photo%20Man/Maternity/AISHU_SIVA_COIMBATORE/orik8jhvkjiyqhsensql.jpg"
     ],
   },
